@@ -516,5 +516,10 @@ return reg_min,reg_param ,G
 end
 
 
+function interp1(bf,xf,xc)
 
+	interpol = Spline1D(xf,bf[:,1], k=1)
+	return interpol(xc)
+
+end
 
